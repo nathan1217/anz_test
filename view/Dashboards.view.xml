@@ -1,0 +1,9 @@
+<mvc:View
+	controllerName="root.controller.Dashboards"
+	displayBlock="true"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+        <core:Fragment fragmentName="root.fragments.menu" type="XML" />
+	<Label text="This dashboard will been developed using D3js, for example:" /><Link text=" http://bl.ocks.org/diethardsteiner/3287802" href=" http://bl.ocks.org/diethardsteiner/3287802" />
+</mvc:View>

@@ -1,0 +1,91 @@
+ {
+	"_version":"1.4.0", 
+	"sap.app": {
+		"_version":"1.2.0", 
+		"id":"lhw", 
+		"type":"application", 
+		"i18n":"i18n/i18n.properties", 
+		"title":"{{appTitle}}", 
+		"description":"{{appDescription}}", 
+		"applicationVersion": {
+			"version":"1.0.0"
+		}
+	}, 
+	"sap.ui": {
+		"_version":"1.1.0", 
+		"technology":"UI5", 
+		"deviceTypes": {
+			"desktop":true, 
+			"tablet":true, 
+			"phone":true
+		}, 
+		"supportedThemes":[
+			"sap_bluecrystal"
+		]
+	}, 
+	"sap.ui5": {
+		"_version":"1.1.0", 
+		"rootView":"root.view.App", 
+		"dependencies": {
+			"minUI5Version":"1.36", 
+			"libs": {
+				"sap.ui.core": {}, 
+				"sap.m": {}, 
+				"sap.ui.layout": {}
+			}
+		}, 
+		"models": {
+			"i18n": {
+				"type":"sap.ui.model.resource.ResourceModel", 
+				"settings": {
+					"bundleName":"root.i18n.i18n"
+				}
+			}
+		}, 
+		"resources": {
+			"js":[ {
+			}], 
+			"css":[ {
+					"uri":"style/main.css"
+				}
+			]
+		}, 
+		"routing": {
+			"config": {
+				"routerClass":"sap.m.routing.Router", 
+				"viewType":"XML", 
+				"viewPath":"root.view", 
+				"controlId":"app", 
+				"controlAggregation":"pages"
+			}, 
+			"routes":[ {
+					"pattern":"", 
+					"name":"login", 
+					"target":"login"
+				},  {
+					"pattern":"home", 
+					"name":"home", 
+					"target":"home"
+				},  {
+					"pattern":"dashboards", 
+					"name":"dashboards", 
+					"target":"dashboards"
+				}
+			], 
+		    "targets": {
+				"login": {
+					"viewName":"Login", 
+					"viewId":"Login"
+				}, 
+				"home": {
+					"viewName":"Home", 
+					"viewId":"Home"
+				},
+				"dashboards":{
+					"viewName":"Dashboards", 
+					"viewId":"Dashboards"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,49 @@
+<mvc:View
+	controllerName="root.controller.Home"
+	displayBlock="true"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:m="sap.m"	
+    xmlns="sap.ui.table">
+        <core:Fragment fragmentName="root.fragments.menu" type="XML" />
+        <Table selectionBehavior="RowOnly" rows="{log>/}">
+            <columns>
+                <Column>
+                    <m:Label text="{i18n>header_timestamp}" />
+                    <template>
+                        <m:Text text="{log>TimeStamp}"/>
+                    </template>
+                </Column>
+                <Column>
+                    <m:Label text="{i18n>header_logmarker}" />
+                    <template>
+                        <m:Text text="{log>LogMarker}"/>
+                    </template>
+                </Column>
+                <Column>
+                    <m:Label text="{i18n>header_logger}" />
+                    <template>
+                        <m:Text text="{log>Logger}"/>
+                    </template>
+                </Column>
+                <Column filterProperty="LogLevel">
+                    <m:Label text="{i18n>header_loglevel}" />
+                    <template>
+                        <m:Text text="{log>LogLevel}"/>
+                    </template>
+                </Column>
+                <Column>
+                    <m:Label text="{i18n>header_currentthread}" />
+                    <template>
+                        <m:Text text="{log>CurrentThread}"/>
+                    </template>
+                </Column>
+                <Column>
+                    <m:Label text="{i18n>header_logmessage}" />
+                    <template>
+                        <m:Text text="{log>LogMessage}"/>
+                    </template>
+                </Column>
+            </columns>
+        </Table>
+</mvc:View>

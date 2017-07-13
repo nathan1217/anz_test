@@ -1,0 +1,20 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <OverflowToolbar>
+        <content>
+            <Link text="{i18n>link_home}" press="onHome" />
+            <Link text="{i18n>link_dashboard}" press="onDashboard" />
+            <ToolbarSpacer />
+            <MenuButton text="{user>/userId}">
+                <menu>							
+                    <Menu itemSelected="onLogout">
+                        <items>
+                            <MenuItem text="{i18n>btn_logout}" key="logout" />
+                        </items>
+                    </Menu>
+                </menu>
+            </MenuButton>
+        </content>
+    </OverflowToolbar>
+</core:FragmentDefinition>

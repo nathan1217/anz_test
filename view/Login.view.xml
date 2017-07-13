@@ -1,0 +1,13 @@
+<mvc:View
+	controllerName="root.controller.Login"
+	displayBlock="true"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+    <FlexBox class="login_box" alignItems="Stretch" justifyContent="SpaceAround" direction="Column">
+        <Label text="{i18n>lbl_userid}" design="Bold"></Label>
+        <Input id="xs_username" value="{/username}"></Input>
+        <Label text="{i18n>lbl_userpwd}" design="Bold"></Label>
+        <Input id="xs_password" value="{/password}" type="Password" placeholder="{i18n>pwd_placeholder}"></Input>
+        <Button text="{i18n>btn_login}" type="Emphasized" press="onLogin" class="login_btn"></Button>
+    </FlexBox>
+</mvc:View>
